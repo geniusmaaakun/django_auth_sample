@@ -14,7 +14,7 @@
 <body>
     <!-- ナビバー -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="{% url 'video:top' %}">ホームページ名</a>
+            <a class="navbar-brand" href="{% url 'myapp:top' %}">ホームページ名</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -24,23 +24,23 @@
                             {% if user.is_authenticated %}
                             {{ user.username }}
                             <li>
-                              <a class="nav-item nav-link" href="{% url 'video:user_detail' user.pk %}">ユーザー情報閲覧</a>
+                              <a class="nav-item nav-link" href="{% url 'myapp:user_detail' user.pk %}">ユーザー情報閲覧</a>
                             </li>
                             <li>
-                              <a class="nav-item nav-link" href="{% url 'video:user_update' user.pk %}">ユーザー情報更新</a>
+                              <a class="nav-item nav-link" href="{% url 'myapp:user_update' user.pk %}">ユーザー情報更新</a>
                             </li>
                             <li>
-                              <a class="nav-item nav-link" href="{% url 'video:logout' %}">ログアウト</a>
+                              <a class="nav-item nav-link" href="{% url 'myapp:logout' %}">ログアウト</a>
                             </li>
                             <li>
-                              <a class="nav-item nav-link" href="{% url 'video:password_change' %}">パスワードの変更</a>
+                              <a class="nav-item nav-link" href="{% url 'myapp:password_change' %}">パスワードの変更</a>
                             </li>
                             <li>
-                              <a class="nav-item nav-link" href="{% url 'video:email_change' %}">メールアドレスの変更</a>
+                              <a class="nav-item nav-link" href="{% url 'myapp:email_change' %}">メールアドレスの変更</a>
                             </li>
                             {% else %}
                             <li class="nav-item">
-                              <a class="nav-item nav-link" href="{% url 'video:login' %}">
+                              <a class="nav-item nav-link" href="{% url 'myapp:login' %}">
                               ようこそ、ゲスト！ログインはこちら
                             </a>
                             </li>
